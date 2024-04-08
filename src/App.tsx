@@ -1,10 +1,10 @@
-import ToDo from "./components/ToDo"
+import TODOWidget from "./components/TODOWidget/TODOWidget"
 
 
 export default function App () {
   return (
     <main>
-      <ToDo/>
+      <TODOWidget/>
     </main>
   )
 }
