@@ -1,0 +1,111 @@
+:root {
+    --title-font-size: 24px;
+    --primary-font-size: 16px; /* Define la variable para el tamaño de fuente primaria */
+}
+
+.todo-widget {
+    display: flex;
+    flex-direction: column;
+    background-color: #F0F4F8; /* Fondo claro y neutro */
+    padding: 15px;
+    width: calc(100% - 30px); 
+    min-width: 350px;
+    border-radius: 10px;
+    gap: 15px;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.1); /* Sombra más suave */
+    transition: 0.3s;
+}
+
+.todo-note {
+    background-color: #FFFFFF; /* Fondo blanco para las notas */
+    border-left: 5px solid #62B4FF; /* Borde lateral como detalle colorido */
+    border-radius: 5px;
+    padding: 10px;
+    margin: 10px 0;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05); /* Sombra aún más suave */
+    transition: transform 0.2s, box-shadow 0.2s; /* Agregar transición a la sombra */
+}
+
+.todo-note.done{
+    background-color: #00ff2a1e;
+}
+
+.todo-note:hover {
+    transform: scale(1.03); /* Aumento sutil al hacer hover */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Sombra más notoria al hacer hover */
+}
+
+.todo-note header {
+    display: flex;
+    justify-content: space-between;
+    align-items:start;
+    gap: 10px;
+}
+
+.todo-note-title {
+    font-weight: 700;
+    font-size: var(--title-font-size);
+    flex-grow: 1;
+    height: 40px;
+    background-color: transparent;
+    
+}
+
+.todo-note-title::placeholder {
+    color: #000000; /* Color del texto del placeholder */
+    background-color: transparent;
+}
+
+.todo-note-content::placeholder {
+    color: #000000; /* Color del texto del placeholder */
+    background-color: transparent;
+}
+
+textarea  {
+    height: auto;
+    border: none;
+    resize: none;
+    overflow-y: hidden;
+}
+
+textarea:focus {
+    outline: none;
+    /* También puedes agregar otras propiedades para ajustar la apariencia según sea necesario */
+}
+
+.todo-note-done {
+    cursor: pointer;
+    color: greenyellow;
+}
+
+.todo-note-done:checked {
+    color: green;
+}
+
+.todo-note-remove {
+    background-color: #FF7A85; /* Rojo suave para el botón eliminar */
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 12px; /* Aumenta el ancho para una mejor visualización */
+    height: 12px; /* Aumenta la altura para una mejor visualización */
+    cursor: pointer;
+    outline: 1px solid rgba(156, 0, 0, 0.541);
+    transition: background-color 0.2s;
+    margin: 3px;
+}
+
+
+
+.todo-note-remove:hover {
+    background-color: #FF5A6E; /* Variante más oscura al pasar el mouse */
+}
+
+.todo-note-content {
+    margin-top: 10px;
+    font-size: var(--primary-font-size);
+    font-weight: 600;
+    width: 100%;
+    overflow-wrap: break-word;
+    background-color: transparent;
+}
